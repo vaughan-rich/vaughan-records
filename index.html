@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A daily music recommendation from Rich Vaughan">
+    <meta name="keywords" content="Vaughan Records, Rich Vaughan, daily music recommendation, Vinyl, Discogs, Music">
+    <meta name="author" content="Rich Vaughan">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Vaughan Records</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+      
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="masthead-brand">rich vaughan</h3>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="https://richvaughan.co.uk">RECORD OF THE DAY</a>
+        <a class="nav-link" href="https://twitter.com/frankdrebinbot?lang=en">DREBIN BOT</a>
+        <a class="nav-link" href="https://github.com/vaughan-rich/">...AND MORE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">today's release</h1>
+    <p class="lead"><span id="currentDate"></span></p>
+    <p class="lead" id="image_box">
+    </p>
+    <a href="https://www.amazon.co.uk/dp/B08HSQSYLX/ref=sr_1_1?keywords=rich%27s+record+of+the+day"><img src="badges/alexa_badge_light.png" id="alexa_badge"></img></a>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>contact me: <a href="mailto:richard.vaughan16@btinternet.com?subject=I%20saw%20your%20website!">email</a>, or <a href="https://uk.linkedin.com/in/rich-vaughan">linkedin</a></p>
+    </div>
+  </footer>
+</div>
+  <div id="cookiePopup">
+    <div id="cookiePopupContents">
+        <p id="copy">This site uses analytics cookies to measure traffic volume. That's all. Honest. Please accept or decline below:</p>
+        <button id = "accept" onclick="acceptCookies()" class="btn draw-border">Accept</button><button id="decline" onclick="declineCookies()" class="btn draw-border">Decline</button>
+    </div>
+  </div>
+<script onload="updateRecord();" src="scripts/update.js"></script>
+<script onload="previousAcceptance();" src="scripts/cookies.js"></script>
+</body>
+</html>

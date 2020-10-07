@@ -1,0 +1,254 @@
+/*
+ * Globals
+
+ */
+
+@font-face {
+    font-family: 'vulf_monoitalic';
+    src: url('../fonts/Vulf_Mono-Italic_web.woff2') format('woff2'),
+         url('../fonts/Vulf_Mono-Italic_web.woff') format('woff'),
+         url('../fonts/Vulf_Mono-Italic_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'vulf_monolightitalic';
+    src: url('../fonts/Vulf_Mono-Light_Italic_web.woff2') format('woff2'),
+         url('../fonts/Vulf_Mono-Light_Italic_web.woff') format('woff'),
+         url('../fonts/Vulf_Mono-Light_Italic_web.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+ @media screen and (orientation:portrait) {
+     body {
+         height:100vh;
+     }
+}
+
+ @media screen and (orientation:landscape) {
+     body {
+         height:100vw;
+     }
+}
+
+html,
+body {
+  background-color: #3a4660;
+  font-family: 'vulf_monolightitalic';
+  visibility:hidden;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 100em;
+}
+
+/*
+ * Header
+ */
+.masthead {
+    margin-bottom: 2rem;
+    font-family: 'vulf_monoitalic'
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+color: #ed8a63;
+text-align:center;
+    margin:auto;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+    font-family: 'vulf_monolightitalic';
+    font-size:.75em;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+}
+.cover-heading {
+    color: #ed8a63;
+    font-size:1.75em;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+  font-size: .8em;
+
+}
+
+/* Custom Stuff */
+
+img {
+    width:60%;
+    box-shadow: .1em .1em .1em .1em black;
+    -webkit-box-reflect: below 8px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(85%, transparent), to(rgba(255, 255, 255, 0.085)));
+}
+
+#alexa_badge {
+    width:17.5%;
+    box-shadow: none;
+    margin-bottom:2.5em;
+}
+
+@media (min-width: 48em) {
+  img {
+    width: 50%;
+  }
+  #alexa_badge {
+    width:10%;
+    box-shadow: none;
+    margin-bottom:2.5em;
+  }
+  .cover-heading {
+    font-size:3em
+  }
+    .masthead{
+        margin-bottom: 7.5%!important;
+    }
+}
+
+#cookiePopup {
+    visibility:visible;
+    position:fixed;
+    top:0;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    z-index: 10;
+}
+
+#cookiePopupContents {
+    height:100%;
+    width:100%;
+    padding: 1.5rem 2rem;
+}
+
+#image_box p{
+    margin-top:1em;
+    font-size:.8em;
+}
+
+
+/*Button drawing effect taken from: https://codepen.io/giana/pen/xdXpJB */
+
+.draw-border {
+	 box-shadow: inset 0 0 0 0px #58afd1;
+	 color: #c9af98;
+	 transition: color 0.25s 0.0833333333s;
+	 position: relative;
+}
+ .draw-border::before, .draw-border::after {
+	 border: 0 solid transparent;
+	 box-sizing: border-box;
+	 content: '';
+	 pointer-events: none;
+	 position: absolute;
+	 width: 0;
+	 height: 0;
+	 bottom: 0;
+	 right: 0;
+}
+ .draw-border::before {
+	 border-bottom-width: 4px;
+	 border-left-width: 4px;
+}
+ .draw-border::after {
+	 border-top-width: 4px;
+	 border-right-width: 4px;
+}
+ .draw-border:hover {
+	 color: #ed8a63;
+}
+ .draw-border:hover::before, .draw-border:hover::after {
+	 border-color: #ed8a63;
+	 transition: border-color 0s, width 0.25s, height 0.25s;
+	 width: 100%;
+	 height: 100%;
+}
+ .draw-border:hover::before {
+	 transition-delay: 0s, 0s, 0.15s;
+}
+ .draw-border:hover::after {
+	 transition-delay: 0s, 0.15s, 0s;
+}
+ .btn {
+	 background: none;
+	 border: none;
+	 cursor: pointer;
+	 line-height: 1.5;
+	 font: 700 1.2rem 'vulf_monolightitalic';
+	 padding: .75em 1.5em;
+	 letter-spacing: 0.05rem;
+}
